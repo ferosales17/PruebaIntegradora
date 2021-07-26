@@ -133,12 +133,12 @@ public class StringUtil {
     }
 
 
-    public static HashMap<String, String> ultimoDigito(String[] a) {
+    public static HashMap<String, String> lastDigit(String[] a) {
         HashMap<String, String> hm = new HashMap<>();
         for (int i = 0; i < a.length; i++) {
             String elem = a[i];
             String uP = elem.substring(elem.length() - 1);
-            hm.put(uP,elem);
+            hm.put(elem,uP);
         }
         return hm;
     }
@@ -147,20 +147,18 @@ public class StringUtil {
         HashMap<String, String> hm = new HashMap<>();
         for (int i = 0; i < a.length; i++) {
             String elem = a[i];
-            String uP = elem.substring(elem.length() - 2);
-            System.out.println("uP = " + uP);
-            hm.put(uP, elem);
+            String uP = elem.substring(elem.length() - 2,elem.length() - 1);
+            hm.put(elem,uP);
         }
         return hm;
     }
 
-    public static HashMap<String, String> antePenultimoDigito(String[] a) {
+    public static HashMap<String, String> firstDigit(String[] a) {
         HashMap<String, String> hm = new HashMap<>();
-        for (int i = 0; i < a.length; i++) {
+        for (int i = 0; i < a.length;i++) {
             String elem = a[i];
-            String uP = elem.substring(elem.length() - 3);
-            System.out.println("uP = " + uP);
-            hm.put(uP, elem);
+            String uP = elem.substring(0,elem.length() - 2);
+            hm.put(elem,uP);
         }
         return hm;
     }
