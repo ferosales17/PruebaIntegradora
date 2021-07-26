@@ -1,7 +1,6 @@
 package domain;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class StringUtil {
     // Retorna una cadena compuesta por n caracteres c
@@ -20,27 +19,23 @@ public class StringUtil {
     // y precedida de tantos caracteres c como sea necesario
     // para completar la longitud mencionada
     public static String lpad(String s, int n, char c) {
-        //Implementación
         String cadena = "";
         StringBuilder strnbl = new StringBuilder();
         for (int i = 1; i <= n; i++) {
             strnbl.append(String.valueOf(c));
             cadena = String.valueOf(strnbl) + s;
         }
-        //System.out.println(cadena);
         return cadena;
     }
 
     // Retorna un String[] conteniendo los elementos de arr
     // representados como cadenas de caracteres
     public static String[] toStringArray(int arr[]) {
-        //Implementación
         String arrStrg[] = new String[arr.length];
         String charS;
         for (int i = 0; i < arr.length; i++) {
             charS = String.valueOf(arr[i]);
             arrStrg[i] = charS;
-            System.out.println(i + " = " + arrStrg[i]);
         }
         return arrStrg;
     }
@@ -48,7 +43,6 @@ public class StringUtil {
     // Retorna un String[] conteniendo los elementos de arr
     // representados como cadenas de caracteres
     public static int[] toIntArray(String arr[]) {
-        //Implementación
         int arrInt[] = new int[arr.length];
         int a;
         for (int i = 0; i < arr.length; i++) {
@@ -63,7 +57,6 @@ public class StringUtil {
     // Retorna la longitud del elemento con mayor cantidad
     // de caracteres del array arr
     public static int maxLength(String arr[]) {
-        //Implementación
         int max = 0, min = 0, cont = 0;
         for (int i = 0; i < arr.length; i++) {
             String nombre = arr[i];
@@ -87,7 +80,6 @@ public class StringUtil {
     // Completa los elemento del arr agregando caracteres c
     // a la izquierda, dejando a todos con la longitud del mayor
     public static void lNormalize(String arr[], char c) {
-        //Implementación
         int max = 0, min = 0, cont = 0;
         int maximo = maxLength(arr); // me trae el maximo de los elemntos
         int count2 = 0;
@@ -126,7 +118,6 @@ public class StringUtil {
                 agregar = replicate(c, resto);
                 nombre = agregar + nombre;
             }
-            System.out.println("Numero = " + nombre + " con Tamaño = " + nombre.length());
             nArrg[i] = nombre;
         }
         return nArrg;

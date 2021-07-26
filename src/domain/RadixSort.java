@@ -13,12 +13,10 @@ public class RadixSort {
         //Implementación
         String arrStrg[] = toStringArray(arr); // 1- convierto el arreglo de enteros en string
         String normARR[] = normalizeWithZeroLeft(arrStrg, '0'); // 2- relleno elementos con 0 para tener el mismo tamaño
-
-
         // ultimo digito
         System.out.println("LISTAS DE ULTIMO NUMERO:");
-        mapListLastDigit = lastDigit(normARR);
-        callLists(mapListLastDigit);
+        mapListLastDigit = lastDigit(normARR);       // 3- busco el ultimo digito de cada elemento
+        callLists(mapListLastDigit);                 // 4- llamo e imprimo la lista de cada elemento
         System.out.println("LISTAS DEL ANTEULTIMO NUMERO:");
         mapListBeforeLastDigit = anteUltimoDigito(normARR);
         callLists(mapListBeforeLastDigit);
