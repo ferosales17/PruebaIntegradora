@@ -138,11 +138,7 @@ public class StringUtil {
         for (int i = 0; i < a.length; i++) {
             String elem = a[i];
             String uP = elem.substring(elem.length() - 1);
-            //System.out.println("uP = " + uP);
-            hm.put(uP, elem);
-            //System.out.println("uP = " + uP);
-            //System.out.println(" hm = " + hm.get(uP));
-            //System.out.println(" el = " +hm);
+            hm.put(uP,elem);
         }
         return hm;
     }
