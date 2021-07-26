@@ -18,7 +18,7 @@ public class RadixSort {
         mapListLastDigit = lastDigit(normARR);       // 3- busco el ultimo digito de cada elemento
         callLists(mapListLastDigit);                 // 4- llamo e imprimo la lista de cada elemento
         System.out.println("LISTAS DEL ANTEULTIMO NUMERO:");
-        mapListBeforeLastDigit = anteUltimoDigito(normARR);
+        mapListBeforeLastDigit = beferoLastDigit(normARR);
         callLists(mapListBeforeLastDigit);
         System.out.println("LISTAS DEL PRIMER NUMERO:");
         mapListFirstDigit = firstDigit(normARR);

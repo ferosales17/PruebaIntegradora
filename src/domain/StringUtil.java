@@ -134,7 +134,7 @@ public class StringUtil {
         return hm;
     }
 
-    public static HashMap<String, String> anteUltimoDigito(String[] a) {
+    public static HashMap<String, String> beferoLastDigit(String[] a) {
         HashMap<String, String> hm = new HashMap<>();
         for (int i = 0; i < a.length; i++) {
             String elem = a[i];
@@ -148,7 +148,7 @@ public class StringUtil {
         HashMap<String, String> hm = new HashMap<>();
         for (int i = 0; i < a.length;i++) {
             String elem = a[i];
-            String uP = elem.substring(0,elem.length() - 2);
+            String uP = elem.substring(0,0 + 1);
             hm.put(elem,uP);
         }
         return hm;
